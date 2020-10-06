@@ -32,6 +32,12 @@ const style = document.querySelector('#font-style')
 // Show Style
 const showStyle = document.querySelector('#show-style')
 
+// Get Letter Spacing
+const spacing = document.querySelector('#spacing')
+// Show Spacing
+const showSpacing = document.querySelector('#show-spacing')
+
+
 inputSize.addEventListener('input', handleInput)
 showSize.addEventListener('input', handleInput)
 enterText.addEventListener('input', editText)
@@ -40,6 +46,7 @@ bgColor.addEventListener('input', backyColor)
 font.addEventListener('input', handleInput)
 weight.addEventListener('input', handleInput)
 style.addEventListener('input', handleInput)
+spacing.addEventListener('input', handleInput)
 
 
 function handleInput() {
@@ -78,6 +85,13 @@ function handleInput() {
     display.style.fontStyle = getStyle
     // display style
     showSize.innerHTML = getStyle
+
+    //get spacing
+    const getSpace = spacing.value + 'px'
+    //set spacing
+    display.style.letterSpacing = getSpace
+    // display spacing
+    showSpacing.innerHTML = getSpace
 
 }
 
