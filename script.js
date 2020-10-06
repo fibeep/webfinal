@@ -37,6 +37,10 @@ const spacing = document.querySelector('#spacing')
 // Show Spacing
 const showSpacing = document.querySelector('#show-spacing')
 
+// Get Padding
+const getPadding = document.querySelector('#pad')
+// Show Padding
+const showPadding = document.querySelector('#show-padding')
 
 inputSize.addEventListener('input', handleInput)
 showSize.addEventListener('input', handleInput)
@@ -47,6 +51,7 @@ font.addEventListener('input', handleInput)
 weight.addEventListener('input', handleInput)
 style.addEventListener('input', handleInput)
 spacing.addEventListener('input', handleInput)
+getPadding.addEventListener('input', changePad)
 
 
 function handleInput() {
@@ -57,14 +62,6 @@ function handleInput() {
     // Show the size
     showSize.innerHTML = fontSize
     
-        
-    // Get Font Color
-    const fColor = inputColor.value
-    // Set Color
-    display.style.color = fColor
-    //Show Color --> NEEDS WIP
-    showColor.innerHTML = fColor
-
     //Get font Family
     const fontFam = font.value
     // Set font Family - NEEDS IMPROVEMENT
@@ -119,4 +116,14 @@ function backyColor() {
 
     // Show bg color - WIP
     showBgColor.innerHTML = backColor
+}
+
+function changePad() {
+    // Get Padding
+    const newPad = getPadding.value + 'px'
+    // Set Padding
+    headDisplay.style.padding = newPad
+    // Display Padding
+    showPadding.innerHTML = newPad
+
 }
