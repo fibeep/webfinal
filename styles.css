@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.left > *{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.right > *{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#data-input,#headline-display {
+    border: black 4px solid;
+}
+
+.left, .right {
+    padding: 50px;
+}

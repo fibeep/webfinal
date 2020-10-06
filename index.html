@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Salomon Cohen - Final - Web1.0</title>
+            <link rel="stylesheet" href="styles.css">
+        
+        </head>
+        <body>
+            <div class="left">
+                <section id="student-info">
+                    <h1>Salomon Cohen</h1>
+                    <p>My favorite color is orange and I wear Adidas</p>
+                </section>
+                <div id="data-input">
+                    <h1>Font Styler</h1>
+                    <label>Font Size</label>
+                    <input type="number" min="0" value="12" id="input-size">
+                    <label>Font Family</label>
+                    <select id="font-selector">
+                        <option value="Helvetic">Helvetic</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Georgia">Georgia</option>
+                    </select>
+                    <label>Font Color</label>
+                    <input type="color" value="#000" id="input-color">
+                    <label>Background Color</label>
+                    <input type="color" value="#fff" id="input-bg-color">
+                    <label>Enter Text</label>
+                    <textarea id="enter-text"></textarea>
+                </div>
+            </div>
+            <div class="right">
+                <div id="headline-display">
+                    <h1 id="display">Sample Text</h1>
+                </div>
+                <div id="data-output">
+                    <h1>Font Settings</h1>
+                    <pre><code>         .headline {
+                    font-size: <span id="show-size">16</span>;
+                    font-family: <span id="show-font">Times</span>;
+                    color: <span id="show-color">#000</span>;
+                    background-color: <span id="show-bg-color">#fff</span>;
+                }</code></pre>
+                </div>
+            </div>
+        </body>
+        <script src="script.js"> </script>
+    </html>
