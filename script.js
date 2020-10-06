@@ -24,9 +24,9 @@ const showBgColor = document.querySelector('#show-bg-color')
 
 inputSize.addEventListener('input', handleInput)
 showSize.addEventListener('input', handleInput)
-enterText.addEventListener('input', handleInput)
-inputColor.addEventListener('input', handleInput)
-bgColor.addEventListener('input', handleInput)
+enterText.addEventListener('input', editText)
+inputColor.addEventListener('input', fontColor)
+bgColor.addEventListener('input', backyColor)
 font.addEventListener('input', handleInput)
 
 function handleInput() {
@@ -52,20 +52,31 @@ function handleInput() {
     // Show Family
     showFont.innerHTML = fontFam
     
-    // Get background Color
-    const backColor = bgColor.value
-    // Set Bg Color
-    headDisplay.style.backgroundColor = backColor
-    
-    // Show bg color - WIP
-    showBgColor.innerHTML = backColor
 
+}
+
+function editText() {
     // Get Text 
     const getText = enterText.value
     // Set Text
     display.innerHTML = getText
-    
-
 }
 
- 
+function fontColor () {
+    // Get Font Color
+    const fColor = inputColor.value
+    // Set Color
+    display.style.color = fColor
+    //Show Color
+    showColor.innerHTML = fColor
+}
+
+function backyColor() {
+    // Get background Color
+    const backColor = bgColor.value
+    // Set Bg Color
+    headDisplay.style.backgroundColor = backColor
+
+    // Show bg color - WIP
+    showBgColor.innerHTML = backColor
+}
