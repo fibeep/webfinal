@@ -22,12 +22,25 @@ const showColor = document.querySelector('#show-color')
 // show back color
 const showBgColor = document.querySelector('#show-bg-color')
 
+// Font Weight Choser
+const weight = document.querySelector('#font-weight')
+// Show Weight
+const showWeight = document.querySelector('#show-weight')
+
+// Font Style Choser
+const style = document.querySelector('#font-style')
+// Show Style
+const showStyle = document.querySelector('#show-style')
+
 inputSize.addEventListener('input', handleInput)
 showSize.addEventListener('input', handleInput)
 enterText.addEventListener('input', editText)
 inputColor.addEventListener('input', fontColor)
 bgColor.addEventListener('input', backyColor)
 font.addEventListener('input', handleInput)
+weight.addEventListener('input', handleInput)
+style.addEventListener('input', handleInput)
+
 
 function handleInput() {
     // get the font size:
@@ -52,6 +65,19 @@ function handleInput() {
     // Show Family
     showFont.innerHTML = fontFam
     
+    // get weight
+    const getWeight = weight.value
+    // set weight
+    display.style.fontWeight = getWeight
+    // display weight
+    showWeight.innerHTML = getWeight
+
+    //get style
+    const getStyle = style.value
+    // set style
+    display.style.fontStyle = getStyle
+    // display style
+    showSize.innerHTML = getStyle
 
 }
 
